@@ -22,9 +22,11 @@
     <footer>
         <p id="txtGuess">Go on... pick one!</p>
     </footer>
+    <script type="text/javascript" src="isoCountryCode.js"></script>
     <script type="text/javascript">
         //Actually... there is no super computer... this is a geo lookup test using a third party service phpinfo.io. This whole process is based on the information in your ip address.
         var country = "<?php echo $location->country ?>";
+        country = getCountryName(country);
         var stateOrProvince = "<?php echo $location->region ?>";
         var city = "<?php echo $location->city ?>";
         var stage = 1;
